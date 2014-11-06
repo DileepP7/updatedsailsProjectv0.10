@@ -1,0 +1,40 @@
+<div class="container">
+	<div id="rightContent">
+	<h1>Display Name: <%- user.name %> </h1>
+	<h3>Title: <%- user.title %> </h3>
+	<h3>Role:<% if(user.admin) { %>
+			Admin
+			<% } else { %>
+				General User
+			<% } %> </h3>
+	<hr>
+	<h3>Email : <%= user.email %> </h3>
+
+	<a href="/user/edit/<%= user.id %>" class="btn btn-medium btn-primary"> Edit </a>
+    </div>
+
+    <div id="leftContent">
+    	<h2>My Shop</h2>
+
+    	<table class='table'>
+		<tr>
+			
+			<th>Shop Name</th>
+			<th>Description</th>
+			
+			
+		</tr>
+
+	<% _.each(user.shop,function(shop){ %>
+		<tr>
+			
+			<th><a href="../../shop/<%=shop['id'] %>/product"><%= shop['shop_name'] %></a></th>
+			<th><%= shop['shop_desc'] %></th>
+		</tr>
+
+	<% }) %>			
+		
+	</table>
+
+    </div>
+</div>

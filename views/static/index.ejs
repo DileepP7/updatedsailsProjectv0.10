@@ -1,0 +1,60 @@
+<div class="container" style="margin-top:20px;padding: 0px 30px 0px 30px">
+
+	<% if(!session.authenticated) { %>
+    <div class="jumbotron">
+        <h1>Respect Social Networking</h1>
+
+        <h2>Connecting People for Mutual Benifit</h2>
+        <a href="user/new" class="btn btn-lg btn-success">Sign Up Now !!</a>
+        <a href="auth/facebook" class="btn btn-lg btn-primary">Login with Facebook</a>
+        <a href="auth/google" class="btn btn-lg btn-primary">Login with Google</a>
+        <a href="auth/twitter" class="btn btn-lg btn-primary">Login with Twitter</a>
+    </div>
+    <% } %>
+    <h2>Latest Shop</h2>
+   <div id="latestShop">
+		<% _.each(shop,function(shop){ %>
+		<div>
+				<strong>Shop Name:<a href="../../shop/<%=shop['id'] %>/product"><%= shop['shop_name'] %></a></strong><br>
+				<em>Brief Description:<%= shop['shop_desc'] %></em><br>
+				<a href="#" class="btn btn-success fa fa-envelope-o">Subscribe</a>
+				<a href="../../shop/<%=shop['id'] %>/product" class="btn btn-warning">View Products</a>
+		</div>
+
+	<% }) %>
+	
+	</div>
+</div>
+	
+
+		<div class="vm-boder-bot" "col-md-3" style="margin-left:200px;margin-right:220px;"></div>
+		<div class="vm-boder-bot" "col-md-3" style="margin-left:200px;margin-right:220px;"></div>
+
+<div class="container" style="margin-top:-20px;padding: 0px 30px 0px 30px">
+
+            <div class="row">
+                        <h2>All Shops</h2>
+                        <div id="latestShop">
+                        <% _.each(shop,function(shop)
+                        { %>
+                        
+								<div>
+									
+									<strong>Shop Name:<a href="../../shop/<%=shop['id'] %>/product"><%= shop['shop_name'] %></a></strong><br>
+									<em>Brief Description:<%= shop['shop_desc'] %></em><br>
+									<a href="#" class="btn btn-success fa fa-envelope-o">Subscribe</a>
+									<a href="../../shop/<%=shop['id'] %>/product" class="btn btn-warning">View Products</a>
+
+								</div>
+
+						<% }) %>
+						</div>
+						</div>
+
+                        
+                        <div class="vm-boder-bot" "col-md-3"></div> 
+                       <div style="padding-top: 10px;"><span class="vm-filterSectionHead">Categories</span>
+                       </div>
+                        
+                    
+</div>

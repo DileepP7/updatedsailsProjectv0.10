@@ -1,0 +1,37 @@
+<form action="/shop/update/<%= shop.id %>" method="POST" class="form-signin" enctype="multipart/form-data">
+	<h2>Editing Shop</h2>
+	<% if(flash && flash.err) { %>
+		<ul class="alert alert-success">
+		<% Object.keys(flash.err).forEach(function(error) { %>
+			<li> <%- JSON.stringify(flash.err[error]) %> </li>
+		<% }) %>
+		</ul>
+	<% } %>
+	<input value="<%= shop.shopId %>" name="shopId" type="text" class="form-control"/>
+	<input value="<%= shop.shop_name %>" name="shop_name" type="text" class="form-control"/>
+	<input value="<%= shop.shop_desc %>" name="shop_desc" type="text" class="form-control"/>
+
+	<select value="<%=shop.shop_category %>" name="shop_category" class="form-control">
+		<option>Shop Category</option>
+		<option>Fashion</option>
+		<option>Lifestyle</option>
+		<option>Food and Beverage</option>
+		<option>Sports</option>
+		<option>Others</option>
+	</select>
+
+	<input value="<%= session.User.id %>" name="createdBy" type="hidden" class="form-control"/>
+	
+
+		<% if(shop.status) { %>
+			<input type="hidden" name="status" value="unchecked">
+			<label class="checkbox"><input type="checkbox" name="status" checked>Active</label>
+		<% } else { %>
+			<input type="hidden" name="status" value="unchecked">
+			<label class="checkbox"><input type="checkbox" name="status">Active</label>
+		<% } %>
+
+
+	<input type="submit" value="Proceed" class="btn btn-lg btn-primary btn-block"/>
+	<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+</form>

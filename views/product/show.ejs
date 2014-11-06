@@ -1,0 +1,16 @@
+<div class="container">
+	<a href="./assets/uploads/<%- product.uploadFile %>">
+	<img src ="./assets/uploads/<%- product.uploadFile %>" class="img-thumbnail large pull-right" ></a>
+	<h1><%- product.prod_name %> </h1>
+	<h3><%- product.prod_desc %> </h3>
+	<% if(product.featured) { %>
+			Featured
+			<% } else { %>
+				Not Featured
+			<% } %>
+	<hr>
+	<h3>Price : <%= product.prod_base_price %> </h3>
+
+	<a href="/product/edit/<%= product.id %>" class="btn btn-medium btn-primary"> Edit </a>
+
+</div>

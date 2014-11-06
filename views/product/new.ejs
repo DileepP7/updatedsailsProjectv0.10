@@ -1,0 +1,45 @@
+<form action="/product/create" method="POST" class="form-signin" enctype="multipart/form-data">
+	
+	<h2 class="form-signin-heading">Create a Product</h2>
+
+	<% if(flash && flash.err) { %>
+		<ul class="alert alert-success">
+		<% Object.keys(flash.err).forEach(function(error) { %>
+			<li> <%- JSON.stringify(flash.err[error]) %> </li>
+		<% }) %>
+		</ul>
+	<% } %>
+
+	<input type="text" class="form-control" placeholder="Product Name" name="prod_name">
+	
+	<input type="text" class="form-control" placeholder="Product Description" name="prod_desc">
+
+	<input type="text" class="form-control" placeholder="Base Price" name="prod_base_price">
+	<input type="text" class="form-control" placeholder="Product sample" name="prod_sample">
+
+ 
+	 <input type="file"  class="form-control" placeholder="Choose image file" name="uploadFile"/>
+
+	<!-- <input type="file"  class="form-control" placeholder="Choose image file" name="prod_image"/> -->
+	</br>
+	<select name="shop_id" class="form-control">
+	<option>Select Existing Shop Name</option>
+	<% _.each(shop,function(shop){ %>
+		<option value=<%=shop['id'] %>>
+			
+			<%= shop['shop_name'] %>
+		
+		</option>
+
+	<% }) %>
+	
+	</select>
+ 
+	<input value="<%= session.User.id %>" name="createdBy" type="hidden" class="form-control"/>
+	<br/>
+	<br/>
+
+	<input type="submit" class="btn btn-lg btn-primary btn-block" value="Add New Product"/>
+	<input type="hidden" name="_csrf" value="<%= _csrf %>" />
+
+</form>

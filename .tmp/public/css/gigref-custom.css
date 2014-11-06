@@ -1,0 +1,275 @@
+/*.glyphicon-lg{font-size:3em}
+.blockquote-box{border:1px solid #CECECE;margin-bottom:15px}
+.blockquote-box .square{width:100px;min-height:50px;margin-right:22px;text-align:center!important;background-color:#E6E6E6;padding:10px 0}
+.blockquote-box.blockquote-primary{border-color:#357EBD}
+.blockquote-box.blockquote-primary .square{background-color:#428BCA;color:#FFF}
+.blockquote-box.blockquote-success{border-color:#4CAE4C}
+.blockquote-box.blockquote-success .square{background-color:#5CB85C;color:#FFF}
+.blockquote-box.blockquote-info{border-color:#46B8DA}
+.blockquote-box.blockquote-info .square{background-color:#5BC0DE;color:#FFF}
+.blockquote-box.blockquote-warning{border-color:#EEA236}
+.blockquote-box.blockquote-warning .square{background-color:#F0AD4E;color:#FFF}
+.blockquote-box.blockquote-danger{border-color:#D43F3A}
+.blockquote-box.blockquote-danger .square{background-color:#D9534F;color:#FFF}*/
+/*Form Sign-in*/
+.blockquote-box{border:1px solid #CECECE;margin-bottom:15px}
+.blockquote-box .square{text-align:center!important;background-color:#E6E6E6;}
+.blockquote-box.blockquote-green{border-color:#E8F3D1}
+.blockquote-box.blockquote-green .square{background-color: #BFDD81;color: #69952d;font-weight: bold;}
+.blockquote-box.blockquote-yellow{border-color:#FFF8DB;}
+.blockquote-box.blockquote-yellow .square{background-color:#FAEBB3;color:#a3830b;font-weight: bold;}
+.blockquote-box.blockquote-pink{border-color:#F5BCBB}
+.blockquote-box.blockquote-pink .square{background-color:#EE918F;color:#9e3f3c;font-weight: bold;}
+.vm-rollover:hover { background-color: #f5f5f5; }
+.vm-green-list-rollover:hover { background-color: #e8f3d1; }
+.vm-yellow-list-rollover:hover { background-color: #fdf8e3; }
+.vm-pink-list-rollover:hover { background-color: #f5bcbb; }
+
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+
+.form-signin .form-control {
+ /* -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout:  auto !important;
+  -webkit-user-select:  auto !important;
+  -khtml-user-select:  auto !important;
+  -moz-user-select:  auto !important;
+  -ms-user-select: auto !important;
+  user-select: auto !important;*/
+  /*Commented by asha*/
+  position: relative;
+  font: 15px 'Segoe UI',Arial,sans-serif;
+  background-color: #EAEBE5;
+  height: auto;
+  padding: 10px;
+  color:#7e8c8d;
+  outline:none;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+/*Coloured Modal*/
+
+.modal-header-success {
+    color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #5cb85c;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}
+.modal-header-warning {
+	color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #f0ad4e;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}
+.modal-header-danger {
+	color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #d9534f;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}
+.modal-header-info {
+    color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #5bc0de;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}
+.modal-header-primary {
+	color:#fff;
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #428bca;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+}
+
+.container-full {
+padding: 0px 0px 0px 0px;
+width: 100%;
+}
+.vm-container-wrapper {
+padding: 0px 20px 0px 20px;
+width: 100%;
+}
+
+.header-wrapper {
+background: #f7f7f7;
+-webkit-box-shadow: 0 1px rgba(45,60,72,0.1);
+-moz-box-shadow: 0 1px rgba(45,60,72,0.1);
+box-shadow: 0 1px rgba(45,60,72,0.1);
+overflow: hidden;
+position: relative;
+width: 100%;
+z-index: 2;
+}
+
+.gigref-font{font:13px/1.231 "Helvetica Neue",sans-serif;color: #333;}
+.vm-filterSectionHead {color: #444;font-size: 14px;font-weight: bold;margin-bottom: 5px;margin-top: 15px;padding-top: 10px;}
+.vm-boder-bot{border-bottom: 1px solid #e2e2e2;margin-bottom: 10px; padding:10px;border-bottom-style:dashed}
+/*.vm-rollover:hover { background-color: #f5f5f5; }*/
+
+/*.pagination>.active>a, .pagination>.active>span, .pagination>.active>a:hover, .pagination>.active>span:hover, .pagination>.active>a:focus, .pagination>.active>span:focus {
+z-index: 2;
+color: #333;
+background-color: #E6E6E6;
+cursor: default;
+}*/
+
+/*Added by: Asha
+  Reason: To implement class has-error for select2 dropdowns
+  Reference:http://xcellerant.net/2013/12/05/adding-bootstrap-error-styling-to-a-select2/ */
+    div.has-error ul.select2-choices {
+      border-color: rgb(185, 74, 72) !important;
+    }
+
+    .has-error .form-control,
+    .has-error .select2-container .select2-choice {
+      border-color: #b94a48;
+      -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+              box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    }
+/* modification ends*/
+
+.vm-white{color:#FFFFFF;}
+
+
+.vm-lft-mnu-font{font-size:11px;font-weight:normal;vertical-align:middle;}
+
+.gigreg-uppercase
+{
+   font-weight:bolder;
+   font-size:1.245rem;
+   text-transform:uppercase;
+}
+/* Added the below classes to make the sqareup button for a button*/
+.gigreg-squareUpButton-Primary
+{
+    color:#FFFFFF;
+    background-color:#3e8cb7;
+    border-color: #4091bd #3d89b3 #3a83ab;
+    text-shadow: 0 -1px #317091;
+    height: auto;
+    line-height:100%; 
+    font-weight: bolder;
+    font-size: 1.245rem;
+    font-family:"SQMarket-medium","Helvetica Neue",sans-serif ;
+    font-style: normal;border-radius: 3px;
+    -webkit-border-radius:3px;
+   /* margin-left:10px;*/
+}
+.gigreg-squareUpButton-Primary:hover
+{
+    color:White;
+    background-color:#4397c4;
+    border-color: #4091bd #3d89b3 #3a83ab;
+    text-shadow: 0 -1px #317091;
+    height: auto;
+    line-height:100%; 
+    font-weight: bolder;
+    font-size: 1.245rem;
+    font-family:"SQMarket-medium","Helvetica Neue",sans-serif ;
+    font-style: normal;border-radius: 3px;
+    -webkit-border-radius:3px;
+    
+}
+.gigreg-squareUpButton-Success
+{
+    color:#FFFFFF;
+    background-color: #5cb85c; 
+    border-color: #4cae4c;
+    text-shadow: 0 -1px #317091;
+    height: auto;
+    line-height:100%; 
+    font-weight: bolder;
+    font-size: 1.245rem;
+    font-family:"SQMarket-medium","Helvetica Neue",sans-serif ;
+    font-style: normal;
+    border-radius: 3px;
+    -webkit-border-radius:3px;
+    
+}
+
+/* Added the below classes to make the sqareup button for a link*/
+.gigreg-squareUpLink-Primary
+{
+    color:#FFFFFF;
+    background-color:#3e8cb7;
+    border-color: #4091bd #3d89b3 #3a83ab;
+    height:42px;
+    border-radius: 3px;
+    -webkit-border-radius:3px;
+}
+.gigreg-squareUpLink-Primary > a
+{
+     color:#FFFFFF;
+     height:auto;
+     background-color:inherit;
+     vertical-align: middle;
+     margin-top: 3px;
+}
+
+
+li.gigreg-squareUpLink-Primary:hover,
+li.gigreg-squareUpLink-Primary > a:hover
+{
+     color:#FFFFFF;
+     background-color:#4397c4;
+     border-color: #4091bd #3d89b3 #3a83ab;
+     vertical-align: middle;
+}
+.vm-menu-text-u{text-transform:uppercase;font-weight:bolder}
