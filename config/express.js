@@ -75,8 +75,8 @@ module.exports.http = {
     }, verifyHandler));
 
     passport.use(new TwitterStrategy({
-      consumerKey: 'S59D02QTGM6yPj9hzOEfbjXzT',
-      consumerSecret: 'WgNKv6F0EY9vBtfp3fXwOvdaYkLX5zn4G5O2tSQNzxS0hU4jzP',
+      consumerKey: 'consumerKey',
+      consumerSecret: 'consumerSecret',
       callbackURL: 'http://localhost:1337/auth/twitter/callback'
     }, verifyHandler));
 
