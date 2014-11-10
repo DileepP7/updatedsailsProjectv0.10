@@ -28,6 +28,7 @@ module.exports = function (req, res, next) {
     passport.session()(req, res, function () {
       // Make the user available throughout the frontend
       res.facebook.user = req.user;
+      req.google.user = req.user;
 
       next();
     });

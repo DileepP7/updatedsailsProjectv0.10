@@ -57,20 +57,26 @@ module.exports.http = {
   customMiddleware: function(app) {
 
     passport.use(new FacebookStrategy({
-      clientID: "738187652903678",
-      clientSecret: "d3bf410d6450e6a9fba52344cf43c6fa",
+      clientID: "1437920633111670",
+      //"738187652903678", 
+      //"1550521908526047",
+      //
+      clientSecret:"9c1216f4fc6013c9836ac0a63749de02",
+      // "d3bf410d6450e6a9fba52344cf43c6fa",
+      //"1146080f131d70c5b1c991b16d32e1d8",
+      //
       callbackURL: "http://localhost:1337/auth/facebook/callback"
     }, verifyHandler));
 
     passport.use(new GoogleStrategy({
-      clientID: 'YOUR_CLIENT_ID',
-      clientSecret: 'YOUR_CLIENT_SECRET',
-      callbackURL: 'http://localhost:1337/auth/google/callback'
+      clientID: "171104488638-i7hgqh7l7u8dbltrout1ucmk6mt4s6rt.apps.googleusercontent.com",
+      clientSecret: "ptmZ7-YP7fmhW0r1xjfgq0tO",
+      callbackURL: "http://localhost:1337/auth/google/callback"
     }, verifyHandler));
 
     passport.use(new TwitterStrategy({
-      consumerKey: 'YOUR_CLIENT_ID',
-      consumerSecret: 'YOUR_CLIENT_SECRET',
+      consumerKey: 'S59D02QTGM6yPj9hzOEfbjXzT',
+      consumerSecret: 'WgNKv6F0EY9vBtfp3fXwOvdaYkLX5zn4G5O2tSQNzxS0hU4jzP',
       callbackURL: 'http://localhost:1337/auth/twitter/callback'
     }, verifyHandler));
 

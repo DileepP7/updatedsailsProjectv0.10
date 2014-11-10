@@ -61,7 +61,12 @@ module.exports = {
       req.session.authenticated = true;
       req.session.User = user;
 
-      user.online = true;
+
+      if(req.session.User){
+        user.online = true;
+      }else{
+      user.online = false;
+    }
       user.save(function(err, user) {
         if (err) return next(err);
 
@@ -190,46 +195,12 @@ module.exports = {
     console.log("Adding Shop");
   },
 
-  facebook: function(req, res) {
-    passport.authenticate('facebook', { failureRedirect: 'user/login', scope: ['email'] }, function(err, user) {
-      
-
-      req.logIn(user, function(err) {
-        if (err) {
-          console.log(err);
-          res.view('500');
-          return;
-        }
-
-        res.redirect('/');
-        return;
-      });
-    })(req, res);
-  },
-
-/*  'facebook': function (req, res, next) {
-     passport.authenticate('facebook', { scope: ['email', 'user_about_me']},
-        function (err, user) {
-            req.logIn(user, function (err) {
-            if(err) {
-                console.log("There was an error");
-                req.session.flash = 'There was an error';
-                res.redirect('user/login');
-            } else {
-                req.session.User = user;
-                req.session.User.admin = true;
-                res.redirect('/user/dashboard');
-            }
-        });
-    })(req, res, next);
-  }, */
-
-  'facebook/callback': function (req, res, next) {
+ /* 'facebook/callback': function (req, res, next) {
      passport.authenticate('facebook',
         function (req, res) {
             res.redirect('/user/dashboard');
         })(req, res, next);
-  },
+  }, */
 
   findUserShopById: function(req, res, next){
     var id = req.param('id');

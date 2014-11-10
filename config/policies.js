@@ -35,16 +35,19 @@ module.exports.policies = {
  '*': "flash",
 
   user: {
+    'find' : "nonAdmin",
     'new' : "flash",
     create  : "flash",
-    show  : "nonAdmin",
-    edit  : "nonAdmin",
-    update  : "nonAdmin",
+    'show'  : "nonAdmin",
+    'edit'  : "nonAdmin",
+    'update'  : "nonAdmin",
     'login' : "flash",
     'logout' : "flash",
     'dashboard' : "flash",
-    'facebook' : "flash",
-    'facebook/callback' : "flash",
+    'facebook' : "sessionAuth",
+    'google' : "sessionAuth",
+    'twitter' : "sessionAuth",
+   // 'facebook/callback' : "flash",
     '*'   : "admin" 
   } 
 

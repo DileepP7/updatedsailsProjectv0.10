@@ -21,7 +21,7 @@ module.exports = {
   // https://developers.facebook.com/docs/
   // https://developers.facebook.com/docs/reference/login/
  facebook: function(req, res) {
-    passport.authenticate('facebook', { failureRedirect: '/login', scope: ['email'] }, function(err, user) {
+    passport.authenticate('facebook', { failureRedirect: '/', scope: ['email'] }, function(err, user) {
       
 
       req.logIn(user, function(err) {
@@ -32,7 +32,7 @@ module.exports = {
         }
         req.session.authenticated = true;
         req.session.User = user;
-        res.redirect('/user/show/' +user.id);
+        res.redirect('/user/dashboard');
         return;
       });
     })(req, res);
@@ -64,7 +64,7 @@ module.exports = {
   // https://developers.google.com/
   // https://developers.google.com/accounts/docs/OAuth2Login#scope-param
   google: function(req, res) {
-    passport.authenticate('google', { failureRedirect: 'user/login', scope: ['https://www.googleapis.com/auth/plus.login', 'https://www.googleapis.com/auth/userinfo.profile', 'https://www.googleapis.com/auth/userinfo.email'] }, function(err, user) {
+    passport.authenticate('google', { failureRedirect: '/login', scope: ['https://www.googleapis.com/auth/plus.login', 'https://www.googleapis.com/auth/userinfo.profile', 'https://www.googleapis.com/auth/userinfo.email'] }, function(err, user) {
       req.logIn(user, function(err) {
         if (err) {
           console.log(err);
@@ -72,7 +72,9 @@ module.exports = {
           return;
         }
 
-        res.redirect('/');
+        req.session.authenticated = true;
+        req.session.User = user;
+        res.redirect('/user/dashboard');
         return;
       });
     })(req, res);
@@ -89,7 +91,9 @@ module.exports = {
           return;
         }
 
-        res.redirect('/');
+         req.session.authenticated = true;
+        req.session.User = user;
+        res.redirect('/user/dashboard');
         return;
       });
     })(req, res);

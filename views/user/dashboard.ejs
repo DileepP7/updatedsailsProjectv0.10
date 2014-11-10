@@ -1,2 +1,34 @@
-<p>You are logged in! Your id is <strong><%- User.id %></strong> and your Facebook Id is <strong><%- User.facebookId %></strong></p>
-<p><a href="/user/logout">Logout</a></p>
+<div class="container">
+
+<p>You are logged in! Your local id is <strong><%- session.User.id %></strong> and your Provider UId is <strong><%- session.User.uid %></strong></p>
+
+
+	<div id="rightContent">
+	<h1>Display Name: <%- session.User.name %> </h1>
+	<h3>Role:<% if(session.User.admin) { %>
+			Admin
+			<% } else { %>
+				General User
+			<% } %> </h3>
+	<hr>
+	<h3>Email : <%= session.User.email %> </h3>
+
+	<a href="/User/edit/<%= session.User.id %>" class="btn btn-medium btn-primary"> Edit </a>
+   
+
+<p><a href="/auth/logout">Logout</a></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
