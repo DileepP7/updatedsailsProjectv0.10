@@ -81,7 +81,7 @@ module.exports = {
 
   //show user details
   show: function(req,res,next){
-    User.findOne(req.param('id'),req.param('uid'), function foundUser(err,user) {
+    User.findOne(req.param('id'), function foundUser(err,user) {
       if(err) return next(err);
 
       if(!user) return next();
@@ -176,7 +176,7 @@ module.exports = {
 
   //Facebook Login 
 
-  'login': function (req, res) {
+  'login': function (req, res) {    
     res.view();
   },
 
@@ -188,7 +188,7 @@ module.exports = {
     req.session.User = null;
     console.log("You have logged out");
     req.session.flash = 'You have logged out';
-    res.redirect('user/login');
+    res.redirect('/user/login');
   },
 
   addShop: function(req,res){

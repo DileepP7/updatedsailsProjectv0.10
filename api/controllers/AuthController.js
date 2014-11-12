@@ -14,6 +14,7 @@ module.exports = {
   },
 
   logout: function(req, res) {
+   // req.session.destroy();
     req.logout();
     res.redirect('/');
   },
@@ -37,29 +38,7 @@ module.exports = {
       });
     })(req, res);
   },
-/*  'facebook': function (req, res, next) {
-     passport.authenticate('facebook', { scope: ['email', 'user_about_me']},
-        function (err, user) {
-            req.logIn(user, function (err) {
-            if(err) {
-                console.log("There was an error");
-                req.session.flash = 'There was an error';
-                res.redirect('user/login');
-            } else {
-                req.session.User = user;
-               // req.session.User.admin = true;
-                res.redirect('/user/dashboard');
-            }
-        });
-    })(req, res, next);
-  },
 
-  'facebook/callback': function (req, res, next) {
-     passport.authenticate('facebook',
-        function (req, res) {
-            res.redirect('/user/dashboard');
-        })(req, res, next);
-  }, */
 
   // https://developers.google.com/
   // https://developers.google.com/accounts/docs/OAuth2Login#scope-param

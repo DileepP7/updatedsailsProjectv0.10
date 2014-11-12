@@ -120,9 +120,10 @@
                   <li><a href="/file/">Media Manager</a></li>
                   <li class="divider"></li>
                   <li><% if(session.authenticated){ %>
-                    <a href="session/destroy">Sign Out</a>
+                    <a href="../session/destroy">Sign Out</a>
            <!-- <a href="/session/destroy" class="btn btn-default navbar-btn navbar-right">Sign Out</a> -->
             <% } %></li>
+            <!--      <li><a href="../auth/logout">Logout</a></li> -->
                 </ul>
               </li>
 
@@ -135,16 +136,18 @@
           </div> -->
           <% if(!session.authenticated) { %>
           <!-- <div class="fb-login-button" data-max-rows="3" data-size="large" data-show-faces="false" data-auto-logout-link="true"></div> -->
-          <form action="/session/create" class="navbar-form navbar-right">
+      <!--    <form action="/session/create" class="navbar-form navbar-right">
             <div class="form-group">
               <input type="text" placeholder="Email" name="email" class="form-control"> 
             </div>
             <div class="form-group">
               <input type="password" placeholder="Password" name="password" class="form-control"> 
             </div>
-            <button type="submit" class="btn btn-success">Sign In</button>
-          </form>
+            <button href="/user/login" type="submit" class="btn btn-success">Sign In</button>
+          </form>  -->
+          <a href="/user/login"><button class="btn btn-sm btn-success navbar-right navbar-inverse" style="margin-top:5px;">| Welcome(Sign in) |</button></a>
           <% } %>
+
 
     </div>
   </div>

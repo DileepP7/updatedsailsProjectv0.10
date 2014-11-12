@@ -53,7 +53,7 @@ module.exports = {
   			err: usernamePasswordRequiredError
   		} 
 
-  		res.redirect('/session/new');
+  		res.redirect('/user/dashboard');
   		return;
   	}
 

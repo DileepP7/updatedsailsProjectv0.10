@@ -30,7 +30,7 @@ module.exports = {
   afterPublishRemove: function(id, alias, idRemoved, req) {
 
   	// Get the shop and all its users
-  	Room.findOne(id).populate('users').exec(function(err, shop) {
+  	Shop.findOne(id).populate('users').exec(function(err, shop) {
   		// If this was the last user, close the shop.  
   		if (shop.users.length === 0) {
   			shop.destroy(function(err) {
