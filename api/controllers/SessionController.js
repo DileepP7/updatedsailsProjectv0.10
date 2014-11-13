@@ -53,7 +53,7 @@ module.exports = {
   			err: usernamePasswordRequiredError
   		} 
 
-  		res.redirect('/user/dashboard');
+  		res.redirect('/session/new');
   		return;
   	}
 
@@ -119,7 +119,7 @@ module.exports = {
   	req.session.destroy();
 
   	//Redirect the browser to the signin form
-  	res.redirect('/session/new');
+  	res.redirect('/');
   }
 
   

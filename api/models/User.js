@@ -118,10 +118,10 @@ module.exports = {
   beforeCreate: function(values,next){
 
     //This checks to make sure the password and password confirmation match before creating record
-  /*  if(!values.password || values.password != values.confirmation) {
+    if(!values.password || values.password != values.confirmation) {
       return next({err: ["Password doesn't match the password confirmation"]});
 
-    } */
+    }
 
     require('bcrypt').hash(values.password,10, function passwordEncrypted(err,encryptedPassword) {
       if(err) return next(err);
